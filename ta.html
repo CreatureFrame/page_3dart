@@ -1,0 +1,1250 @@
+<!-----
+▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼
+
+site coding : creatureframe@gmail.com
+
+originally referenced from:
+★ [ Frome Home ] theme by ricecodes ★
+https://ricecodes.tumblr.com/
+
+Other Credits :
+★ Icons: https://boxicons.com/
+★ Day/Night Mode: https://egg.design/post/186889223257/day-night-mode-tutorial-after-featuring-a
+★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/162657076440/remove-tumblrs-redirects
+
+▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
+----->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>tech art portfolio</title>
+<link rel="stylesheet" href="https://creatureframe.github.io/assets/tech/style-tech.css">
+<link rel="stylesheet" href="https://creatureframe.github.io/assets/tech/style-1page.css">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style-1page.css">
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo&family=Finlandica&family=Inconsolata&family=Mali:wght@500&family=Monda&family=Nanum+Gothic&family=Open+Sans&family=Quicksand:wght@400;500;600;700&family=Secular+One&family=Varela+Round&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+<script type="text/javascript">
+$(window).load(function() {
+setTimeout(function() {
+$("#loading").fadeOut("slow");
+}, 6600);
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+<script>
+$(document).ready(function() {
+var $container = $(".content");
+$(".menu-btn,a.exit").click(function() {
+$(".menu").fadeToggle();
+});
+$(".ptags").each(function() {
+$(this).click(function() {
+$(this).closest("article").find(".tags-wrap").slideToggle("fast");
+$(".close", this).toggle();
+});
+});
+var mode = localStorage.getItem("daynight");
+localStorage.setItem("daynight", mode);
+if (mode == "night") {
+$("body").addClass("night");
+$(".luna").hide();
+$(".solis").show();
+} else {
+mode = "day";
+}
+$(".luna").click(function() {
+$("body").addClass("night");
+$(".luna").hide();
+$(".solis").show();
+localStorage.setItem("daynight", "night")
+});
+$(".solis").click(function() {
+$("body").removeClass("night");
+$(".solis").hide();
+$(".luna").show();
+localStorage.setItem("daynight", "day")
+});
+});
+</script>
+<script>
+$(document).ready(function(){
+$('a[href*="t.umblr.com/redirect"]').each(function(){
+var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
+var replaceURL = decodeURIComponent(originalURL);
+$(this).attr("href", replaceURL);
+});
+});
+</script>
+
+<script>
+// Mikkel Jensen's solution I got from : https://stackoverflow.com/questions/15395920/play-html5-video-when-scrolled-to
+$(document).ready(function() {
+// Get media - with disabled (audio or video)
+var media = $('video').not("[autoplay='autoplay']");
+var tolerancePixel = 40;
+function checkMedia(){
+// Get current browser top and bottom
+var scrollTop = $(window).scrollTop() + tolerancePixel;
+var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+media.each(function(index, el) {
+var yTopMedia = $(this).offset().top;
+var yBottomMedia = $(this).height() + yTopMedia;
+if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){ //view explaination in `In brief` section above
+$(this).get(0).play();
+} else {
+$(this).get(0).pause();
+}
+});
+}
+$(document).on('scroll', checkMedia);
+});
+</script>
+
+
+
+
+<!--  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!--   UNITY WEBGL BUILDS TO DISPLAY   -->
+<!--    (default named : unityContainer ) -->
+
+<!-- <script src="https://creatureframe.github.io/assets/unity/webgl/SlimeShader_demonstrate/Build/UnityLoader.js"></script>
+
+<script>
+  UnityLoader.instantiate("unityContainer_slime", "https://creatureframe.github.io/assets/unity/webgl/SlimeShader_demonstrate/Build/SlimeShader_demonstrate.json");
+</script> -->
+
+
+<!--    example of how to run in page  -->
+<!--    <div id="unityContainer_slime" style="width: 500px; height: 500px; margin: auto"></div>-->
+
+
+
+<!--    <script src="TemplateData/UnityProgress.js"></script>-->
+<!--    <script src="Build/UnityLoader.js"></script>-->
+<!-- //      var unityInstance = -->
+
+<!-- <script>
+UnityLoader.instantiate("unityContainer_timeofday", "https://creatureframe.github.io/assets/unity/webgl/AlpacaTimeOfDayShader_webGL/Build/AlpacaTimeOfDayShader_webGL.json");
+</script> -->
+
+<!-- //                            , {onProgress: UnityProgress}); -->
+<!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+
+</head><body>
+
+
+
+
+<!-- PAGE HEADER -->
+<div class="header">
+<a class="menu-btn" title="back to folio" href="3dart.charlierenwick.com"><span class="bx bx-menu"></span></a>
+<a class="bx-head" title="development log" href="http://dev.creatureframe.com"><span class="bx bxs-book-alt"></span></a>
+<a class="bx-head" title="twitter" href="https://twitter.com/creatureframe"><span class="bx bxl-twitter"></span></a>
+<a class="bx-head" title="contact" href="mailto:creatureframe@gmail.com"><span class="bx bxs-envelope"></span></a>
+<div class="t-controls"><a class="luna" title="dark mode"><span class="bx bx-moon"></span></a>
+<a class="solis" style="display:none;" title="light mode"><span class="bx bx-sun"></span></a></div>
+</div>
+<!-- end div header - PAGE HEADER -->
+<div class="content">
+<div class="content-spacing">
+<!-- <section> -->
+<div style="margin:-150px 0px 0px 0px;"></div>
+<div class='part'>
+<div class="caption" align="center">
+
+
+
+
+
+
+<!-- INFO BANNER AT TOP OF PAGE -->
+<!--
+<div align='center'>
+<div class='banner-note' align='center'>
+<br>
+Hi, welcome to my 3D generalist portfolio!
+<br><br>
+Responsible for all aspects of each piece (design, modelling, retopologising, texturing, rigging, animation, shaders, etc.), except where otherwise specified.
+<br><br>
+</div>
+</div>
+ -->
+
+
+
+
+
+<!-- spacer -->
+<!-- <div style="height:50px;margin:0px;"></div>
+
+<hr class="hr-acrossfull"> -->
+
+
+
+
+<div style="height:10px;margin:0px;"></div>
+
+<!-- START OF FOLIO SECTIONS WITHIN BODY -->
+<!-- <br><br><br><br> -->
+<div class="minifolio-textboxes">
+
+
+
+
+
+
+
+
+
+<!-- https://creatureframe.github.io/assets/tech/techart_shadersinteract.html -->
+
+
+
+
+
+<!--
+
+TO DO
+
+- tidy spacing thru page
+-
+
+ -->
+
+
+
+
+
+
+
+<!-- . . . . . . . . . . . . . . . . . . . . . . . . . -->
+<!-- RIGGING SECTION -->
+<!-- . . . . . . . . . . . . . . . . . . . . . . . . . -->
+<!-- title block -->
+<hr class="hr-goldblock">
+<div class="mid-title" style="font-size:30pt;">
+rigging
+</div><br>
+<!-- end title block -->
+<!-- . . . . . . . . . . . . . . . . . . . . . . . . . -->
+
+
+<!-- spacer -->
+<div style="height:0px;margin:0px;margin-bottom:-30px;"></div>
+
+
+<!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<div class="minifolio-altbg">
+<div class="sidebyside-image">
+<img src="https://64.media.tumblr.com/34279ee198683ebed50a66c16f1cb634/ac448244c7aa4629-f8/s540x810/4e84d6de8fcc0c2df41b269364a7e3451e76891c.gifv" class="gifloops fx-thinbord">
+<div style="margin-bottom:-40px;">
+    <p>
+        Experimenting with ways a raindrop could be stylistically animated, this rig was built to be as flexible as possible.
+    </p>
+</div>
+    
+<!--fish swimming under surface-->
+<!--<img src="https://64.media.tumblr.com/ed9cee8d6625e31d8add08420127ba4f/ac448244c7aa4629-16/s540x810/c40cd9ad64c9a93a277279c055a3de5a8d45067f.gifv" class="gifloops fx-thinbord">-->
+<video autoplay muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+    <source src="assets/images/cat_fishunder_x2_500k.mp4" type="video/mp4"/>
+</video>
+    
+</div>
+<div class="sidebyside-image">
+<video autoplay muted loop playsinline webkit-playsinline class="gifloops" style="border:4px solid #fff;margin:20px 0px 10px -4px;" width="540">
+    <source src="https://creatureframe.github.io/assets/tech/images/cat_catfinal_x2_1500k_HALD_match_bettaDark_01.mp4" type="video/mp4"/>
+</video>
+<div style="margin-bottom:-40px;">
+    <p>
+        While too overcomplex for a dedicated animator to work with, it allowed me to experiment with options and develop the final look.
+        <br><br>
+        Made using Maya and Photoshop.
+    </p>
+</div>
+<img src="https://64.media.tumblr.com/bfb0c51aa4dcac79d904c33ea70d373b/5ceb7fa8fa97c794-ae/s540x810/01d57d0ad6af1606f492206a985f33d179ee3fdd.gifv" class="gifloops fx-thinbord">
+</div>
+</div>
+<!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+<!-- end <div class="minifolio-altbg"> for section-block -->
+
+
+
+
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+<!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!-- <div class="minifolio-altbg"> -->
+<!-- - - - - - - - - - -->
+<!-- alpaca face rig -->
+<div class="sidebyside-image">
+<div class="gifloops fx-photoborder" style="padding:15px; margin:3px;">
+<img src="https://64.media.tumblr.com/f9970d4ce1efad694264821beab1b443/54887cd8627ce25b-d8/s500x750/b956d9c964b75e218aee185da25f6a5196a20a7b.gifv" style="border:1px solid #eee; margin:0px 0px -5px 0px;background: fixed url(assets/tech/images/bg03.png) bottom center;">
+</div>
+
+
+<!-- assets/tech/images/bg_paper02.jpg -->
+<!-- assets/tech/images/C61A6952-Pano-Edit_GreenPatch_partLeft_heavyBlur.jpg -->
+
+</div>
+<!-- photoborder fx-thinbord -->
+<!-- class="gifloops fx-photoborder" -->
+<!-- border:1px solid #ccc; margin:20px; -->
+
+<!-- - - - - - - - - - -->
+<!-- image whale boombox rig -->
+<div class="sidebyside-image">
+<img src="https://64.media.tumblr.com/332392f75fb019afae94997f4fa4b23f/fd581f7f3b19e1d3-2d/s540x810/6c081bc42b1c64e6087d88fd352f1f941591d6c5.gifv" class="gifloops fx-thinbord">
+</div>
+<!-- - - - - - - - - - -->
+<!-- image whale final scene -->
+<!-- <div class="sidebyside-image">
+<img src="https://64.media.tumblr.com/ae07a5102020bd250f50b2950413cc3f/08df2ab86c6f6064-f5/s540x810/d5a7b5c2d8e6f2ac522d168d882c9e261f303c00.gifv" class="gifloops fx-thinbord">
+</div> -->
+<!-- - - - - - - - - - -->
+<!-- </div> -->
+<br><br>
+<!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+
+
+
+<!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<div class="minifolio-altbg">
+<!-- - - - - - - - - - -->
+<div class="sidebyside-image" style="">
+<!-- - - - - - - - - - -->
+<!-- cauldron rig -->
+<img src="https://64.media.tumblr.com/fee4d8efb3fa0f653ab06bba6e9b18e1/tumblr_inline_p64f5xXGbP1smn18a_540.gifv" class="fx-thinbord"  class="gifloops fx-imgpop">
+</div>
+<!-- - - - - - - - - - -->
+<!-- jellyfish rig controls -->
+<div class="sidebyside-image" style="">
+<img src="https://64.media.tumblr.com/6f21b01ec4994e7aff06a47ee3f41de0/tumblr_inline_p7cylwjSYg1smn18a_540.gifv" class="gifloops">
+</div>
+<!-- - - - - - - - - - -->
+</div>
+<!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+
+
+
+
+    
+    
+<!--  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!--
+<hr class="hr-goldblock">
+<div class="mid-title">
+    peacock tail
+</div><br>
+-->
+<!--    PEACOCK TAIL      -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+    
+<!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-image">
+    <div style="margin:-90px 0px 90px 0px;" id="peacock"></div>
+<img src="https://64.media.tumblr.com/08199839eb238aed40faf344e8df3b1b/da57775d3f5f4660-91/s540x810/363d13a5647ab866942a14fb1e2a0927781cabd7.gifv" style="border:1px solid white;">
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+    
+<!--PEACOCK WIREFRAME SIDE-->
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!--
+<div class="sidebyside-image">   
+<img src="https://64.media.tumblr.com/57ea3f5642052f1684626f5e32e1fbcb/df66d92386390ff3-75/s540x810/6672032aec7a71672ae2f27f5eea2dfb8797d113.gifv" class="fx-thinbord">
+</div>
+-->
+<!-- - - - - - - - - - - - - - - - - - - -->
+    <!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-image">
+<video muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+<source src="assets/images/peacock_wireframed_x2_1500k.mp4" type="video/mp4"/>
+</video>
+</div>
+    <!-- - - - - - - - - - - - - - - - - - - -->
+    
+    
+    
+
+<!-- - - - - - - - - - -->  
+<br>
+<!-- - - - - - - - - - -->  
+
+
+
+    
+    <!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-image">
+<video muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+<source src="assets/images/peacock_tail_rig.mp4" type="video/mp4"/>
+</video>
+</div>
+    <!-- - - - - - - - - - - - - - - - - - - -->
+
+    
+    
+    
+
+<!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-textbox">
+
+    <br><br>
+    A personal project that began as an experiment in how a peacock's tail could be rigged, before being visually developed into a complete illustrative scene.
+    <br><br>
+    It resulted in a tidy four controls for the billowing, flexing and rotation of all the feathers cohesively, making for streamlined work when animating it.
+    <div style="height:40px;width:10px;"></div>
+    
+    <div align=center><img src="assets/images/peacock_deco_concepts_colour.png" style="
+        padding:0px;
+        ">
+    </div>
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+    
+
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!--    END PEACOCK TAIL      -->
+<!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+  
+    
+    
+
+
+
+    
+    
+    
+    
+    
+<!-- spacer -->
+<div style="height:60px;margin:0px;margin-bottom:0px;"></div>
+
+
+
+
+
+<!-- title block -->
+<hr class="hr-goldblock">
+<div class="mid-title" style="font-size:30pt;">
+shaders & vfx
+</div><br>
+<!-- end title block -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+
+
+
+<!--  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!--    DAY TIME SHADER      -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+    <!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-image" style="max-width:600px;height:100%;max-height:600px;margin-left:-15px;margin-right:30px;">
+<div class="webgl-container">
+<div id="unityContainer_timeofday" class="webgl-embed"></div>
+</div>
+
+<br><br>
+
+
+<!--    webgl-redir-->
+<!-- spacer -->
+<div style="height:0px;margin:0px;margin-bottom:-7px;"></div>
+<div class="sidebyside-textbox textbox-border note-small" style="margin:-5% 4% 0px 10%;">
+Loading interactive scene. To see this shader demonstrated in a video instead,
+<a class="urly" href="https://charlierenwick.com/techart">click here!</a>
+</div>
+
+
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+
+
+<!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-textbox"  style="margin-top:40px;margin-bottom:-40px;padding:30px;">
+
+<!--<hr class="hr-goldblock" style="max-width: 100%;">-->
+<div class="mid-title" style="font-size:24px;margin:-2% 12%;">
+time-of-day lighting
+</div><br><br>
+
+<div class="sidebyside-textbox textbox-border " style="margin:0% 4% 0% 4%;">
+A 4-way ramp overlay shader, for setting up lighting for various times of day, on a per-model basis.
+</div>
+
+<br><br>
+
+<div align=center><img src="https://creatureframe.github.io/assets/tech/images/shader_timeOfDay_BRDFs.png" style="
+    padding:0px;
+    ">
+</div>
+
+<hr class="hr-goldblock" style="width:300%;margin: 50px -350px -40px -350px;">
+
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!--    END DAY TIME SHADER      -->
+<!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+
+
+
+
+
+    <!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-textbox" style="margin-top:70px;margin-bottom:100px;">
+
+<div align=center>
+<!--<hr class="hr-goldblock" style="max-width: 100%;">-->
+<div class="mid-title" style="font-size:24px;margin:5% 12% -2% 12%;">
+slime creatures
+</div><br><br>
+    </div>
+
+<div class="sidebyside-textbox textbox-border " style="margin:4% 4% 0% 4%;">
+For a 7 day game jam, I designed, modelled, rigged and animated the characters from scratch, and created a suitable refracting slime shader.
+<br><br>
+Press the "see shader" button to play with some variables.
+</div>
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+
+
+
+
+
+    <!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-image" style="max-width:600px;margin-left:-15px;margin-right:30px; margin-top:-100px;">
+<div class="webgl-container">
+<div id="unityContainer_slime" class="webgl-embed"></div>
+</div>
+
+<!--    webgl-redir-->
+<div class="sidebyside-textbox textbox-border note-small" style="margin:2% 4% 0px 10%;">
+Loading interactive scene. To see this shader demonstrated in a video instead,
+    <a class="urly" href="https://charlierenwick.com/techart">click here!</a>
+</div>
+
+
+
+
+</div>
+    <!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!--    END SLIME SHADER      -->
+<!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+<!-- spacer -->
+<div style="height:110px;margin:0px;margin-bottom:0px;"></div>
+
+
+
+
+
+
+
+
+ <!-- <div style="height:120px;margin:0px;margin-bottom:0px;"></div>
+ <div align="center">
+ <div class="footernav-single" style="width:380px;max-width:80%;margin-left:-40px;">
+ <a href="https://creatureframe.github.io/assets/tech/techart_shadersinteract.html">
+ <div class="footernav-button" >
+ <div class="nextbutton-text" style="font-weight:800;">
+ play with these shaders in-browser here!
+ </div>
+ </div></a>
+ </div>
+ </div> -->
+
+
+
+
+<!-- <img src="https://64.media.tumblr.com/bfb0c51aa4dcac79d904c33ea70d373b/5ceb7fa8fa97c794-ae/s540x810/01d57d0ad6af1606f492206a985f33d179ee3fdd.gifv" class="gifloops fx-thinbord"> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+<!-- end <div class="minifolio-altbg"> for section-block -->
+
+
+
+<!-- fx-photoborder -->
+<!-- fx-thinbord -->
+
+
+
+<!--    webgl-redir-->
+<!-- spacer -->
+<!-- <div style="height:0px;margin:0px;margin-bottom:-7px;"></div>
+<div class="sidebyside-textbox textbox-border note-small" style="margin:-5% 4% 0px 10%;">
+Loading interactive scene. To see this shader demonstrated in a video instead,
+<a class="urly" href="https://creatureframe.github.io/assets/tech/techart_shadersinteract.html">click here!</a>
+</div> -->
+
+
+
+
+
+<!-- spacer -->
+<div style="height:10px;margin:0px;margin-bottom:0px;"></div>
+
+
+
+
+
+
+
+
+<!-- - - - - - - - - - -->
+<!-- peacock final scene -->
+<!--
+<div class="sidebyside-image">
+    <div style="margin:-90px 0px 90px 0px;" id="peacock"></div>
+<img src="https://64.media.tumblr.com/08199839eb238aed40faf344e8df3b1b/da57775d3f5f4660-91/s540x810/363d13a5647ab866942a14fb1e2a0927781cabd7.gifv" style="border:1px solid white;">
+</div>
+-->
+
+
+
+
+<!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!-- - - - - - - - - - -->
+<!-- betta dark -->
+<!--
+<div class="sidebyside-image">
+<img src="https://64.media.tumblr.com/e3b0b4e1dc1e96fe610008403743c78d/1e8ea6ebf9a0a2f4-67/s540x810/e0701d287450f43d47739e01aaf2e5fddc87dfa3.gifv" class="gifloops fx-thinbord">
+</div>
+-->
+
+    
+    
+    
+<!-- - - - - - - - - - -->
+<!-- river dragon physics tail -->
+<div class="sidebyside-image">
+<video muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+    <source src="https://creatureframe.github.io/assets/tech/images/dragon_tailphysics_x2_1500k_HALD_match_bettaDark_01.mp4" type="video/mp4"/>
+</video>
+</div>
+<!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+<!-- - - - - - - - - - -->
+<!-- image whale final scene -->
+<div class="sidebyside-image">
+<img src="https://64.media.tumblr.com/ae07a5102020bd250f50b2950413cc3f/08df2ab86c6f6064-f5/s540x810/d5a7b5c2d8e6f2ac522d168d882c9e261f303c00.gifv" class="gifloops fx-thinbord">
+</div>
+<!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+<!-- spacer -->
+<div style="height:30px;margin:0px;margin-bottom:0px;"></div>
+
+
+
+
+
+<!--  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!-- <div class="sidebyside-image">
+<video muted loop playsinline webkit-playsinline class="gifloops fx-photoborder">
+<source src="https://va.media.tumblr.com/tumblr_oecmmqRoRV1tje57z.mp4" type="video/mp4"/>
+</video>
+    <div align=center>
+    <div class="mid-title" style="font-size:24px;margin:1% 1% -2% 1%;">
+    enemy health
+    </div><br><br>
+    </div> class="sidebyside-textbox textbox-border" style="margin:0% 10%;">
+
+Personal experiment during a game-a-week challenge. Seeing the shaders used on the paper enemies in Colour Splash, I wanted to create something similar.
+<br> <br>The shader acts as a health indicator, filling in an alternative texture and losing the glittery shine as the enemy takes damage.
+</div>
+
+</div> -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!--    END HEALTH PAPER SHADER      -->
+<!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+
+<!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<div class="minifolio-altbg">
+<!-- - - - - - - - - - -->
+<!-- enemy health shader paperstyle -->
+<div class="sidebyside-image">
+    <div style="margin:-90px 0px 90px 0px;"></div>
+<video muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+<source src="https://va.media.tumblr.com/tumblr_oecmmqRoRV1tje57z.mp4" type="video/mp4"/>
+</video>
+
+<div style="margin-top:-30px;">
+    <p>
+
+Health indicator shader, for a papery enemy. It fills in an alternative texture and the glitter wings lose their shine as the enemy takes more damage.
+
+<!-- <br><br> -->
+<!-- Personal experiment during a game-a-week challenge. Seeing the shaders used on the paper enemies in Colour Splash, I wanted to create something similar. -->
+<!-- <br><br> -->
+
+    </p>
+</div>
+
+
+
+
+<!-- Personal experiment during a game-a-week challenge. Seeing the shaders used on the paper enemies in Colour Splash, I wanted to create something similar.
+<br><br>
+The shader acts as a health indicator, filling in an alternative texture and losing the glittery shine as the enemy takes damage.
+
+<br><br>Health indicator shader,
+Papery enemy with Glitter paper wings -->
+
+
+
+</div>
+
+<!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!--    END HEALTH PAPER SHADER      -->
+<!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+<!-- - - - - - - - - - -->
+<!-- enemy health shader paperstyle -->
+<div class="sidebyside-image">
+    <div style="margin:-90px 0px 90px 0px;"></div>
+<img src="https://64.media.tumblr.com/77019bc6074fc0fc70a79b8622f3656f/9bf8b089bb1a00f8-10/s540x810/2fb95947c8dd397aff68d8262d0fac99ce512391.gifv" class="gifloops fx-thinbord">
+<div style="margin-top:-10px;">
+    <p>
+
+Halftone shader that holds scale to camera distance.
+
+    </p>
+</div>
+</div>
+<!-- - - - - - - - - - -->
+</div>
+<!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!--    END HALFTONE SHADER      -->
+<!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+<!--
+<br /><br /><img src="https://64.media.tumblr.com/77019bc6074fc0fc70a79b8622f3656f/9bf8b089bb1a00f8-10/s540x810/2fb95947c8dd397aff68d8262d0fac99ce512391.gifv" /><br />
+
+<img src="https://64.media.tumblr.com/a055e6113e7a5d7cc6bd7c8f59a0693f/9bf8b089bb1a00f8-c3/s400x600/3335d9f18b90fa3aa3db1d2529ed6ac0c5c9ee2d.gifv" /><br />
+ -->
+
+
+<!-- spacer -->
+<div style="height:20px;margin:0px;margin-bottom:0px;"></div>
+
+
+
+
+
+
+
+
+
+
+<!-- . . . . . . . . . . . . . . . . . . . . . . . . . -->
+<!-- END SHADERS SECTION -->
+<!-- . . . . . . . . . . . . . . . . . . . . . . . . . -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- . . . . . . . . . . . . . . . . . . . . . . . . . -->
+<!-- TOOLS SECTION -->
+<!-- . . . . . . . . . . . . . . . . . . . . . . . . . -->
+<!-- title block -->
+<hr class="hr-goldblock">
+<div class="mid-title" style="font-size:30pt;z-index:5;position:relative;">
+    tools
+</div><br>
+<!-- spacer -->
+<div style="height:0px;margin:0px;margin-bottom:-20px;"></div>
+<!-- end title block -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+<!--  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!--    WAYWARD PROP RIG      -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-image" style="max-width:640px;margin:20px 5px;">
+<img src="https://creatureframe.github.io/assets/tech/images/rigproptool.gif" class="gifloops fx-imgpop" style="max-width:600px;width:100%;">
+</div>
+<div class="sidebyside-textbox textbox-border" style="max-width:450px;margin:20px 5px 40px 5px;">
+<br>
+    One of the fixes I handled on Wayward Strand was updating the prop rig on each each of the 14 characters to a 2-handed prop rig.
+    <br><br>
+    After designing the new setup, I wrote up a script for quickly integrating it into each rig alongside some other fixes the rigs needed. Here it's being tested in my debugging toolbox, but it was eventually used in batch across all characters at once.
+    <br><br>
+</div>
+<!--    END WAYWARD PROP RIG      -->
+<!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+
+
+<!--  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!--    SCALE MATCH      -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<div class="minifolio-altbg">
+
+<div class="sidebyside-image" style="max-width:640px;margin:10px 5px;">
+<!-- <img src="https://creatureframe.github.io/assets/tech/images/tool_scalematch.mp4" class="gifloops fx-imgpop" style="max-width:600px;width:100%;"> -->
+
+<!-- <div style="max-width:1066px;"> -->
+<!-- width="638"> -->
+<video muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="638">
+<source src="assets/images/tool_scalematch.mp4" type="video/mp4"/>
+</video>
+<!-- </div> -->
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+<br>
+<div class="sidebyside-textbox textbox-border" style="max-width:450px;margin:-90px 0px 10px -5px;">
+<br>
+    Scale matching tool, which resizes all selected meshes to match the bounding box size of the first object selected.
+    <br><br>
+</div>
+<!--- - - - - - - - -->
+</div>
+<!-- end alt bg -->
+
+<!--    END SCALE MATCH      -->
+<!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+
+
+
+
+
+
+<!--  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!--    WAYWARD SKELETON HIERARCHY CHECKER      -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+<hr class="hr-goldblock">
+<div class="mid-title" style="font-size:18pt;">
+    skeleton hierarchy checker
+</div><br>
+<div style="max-width:1066px;">
+<video muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="1066">
+<source src="https://creatureframe.github.io/assets/tech/images/WS_skeletonchecker_x2_500k.mp4" type="video/mp4"/>
+</video>
+</div>
+    <br><br>
+<div align="center">
+<div class="sidebyside-textbox textbox-border" style="content-align: center;align:center;margin:5px 20px;max-width: 800px;">
+    <br>
+    On Wayward Strand, while writing the script to batch integrate the new two-handed rig into each of the characters, I found some inconsistencies between all the rigs, such as missing nodes and unoriented bones. This lead me to exporting the hierarchy tree of each character's skeleton and building a spreadsheet tool that checks between any two characters' list of joints for any differences between them.
+    <br><br>
+    Each character's rig hierarchy can be compared to any other's. Unique components of their rigs are predefined, and then any inconsistencies and missing joints are automatically highlighted, making it faster to be able to track down problem areas.
+    <br><br>
+    The set up also became useful in anticipation of animations needing to be transferred between characters, as it helped to find which couple of characters was the most consistent with as many of the others as possible.
+    <br><br>
+    </div>
+</div>
+<br><br>
+<!--    END WAYWARD SKELETON HIERARCHY CHECKER     -->
+<!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<div class="minifolio-altbg">
+
+<div align="center">
+<div class="sidebyside-textbox textbox-border" style="content-align: center;align:center;margin:5px 20px;max-width: 800px;width:80%;">
+<br>
+
+A Maya tool for quickly adding nurbs curves to selected objects. It colours mesh wireframes, joints, locators, curves, camera wireframes, text, and any other shape nodes, also colouring it in the outliner automatically.
+
+<br><br>
+</div></div>
+
+
+<!--- - - - - - - - -->
+<!-- DOWNLOAD BUTTON -->
+<!-- <div style="width:10px;margin-bottom: -15px;"></div>
+<div align="center">
+<div class="footernav-single">
+<a href="https://creatureframe.github.io/assets/tech/tool-downloads/ColourSwitch v2.2 for Maya.zip">
+<div class="footernav-button">
+<div class="nextbutton-text" style="font-weight:800;font-size: 16pt;">
+download script
+</div>
+</div></a>
+</div></div> -->
+
+
+
+<br><br>
+<!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-image">
+<video muted loop playsinline webkit-playsinline class='gifloops fx-thinbord' width="540" >
+<source src="https://creatureframe.github.io/assets/tech/images/makenurbscurvesatselectedjoints.mp4" type="video/mp4"/>
+</video>
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-image">
+<img src="https://64.media.tumblr.com/e388be36bc5b6917016ff41a34e23d14/af5867a9bf89386f-17/s540x810/8be3cc14ab1e0ea1e4c84bf8e91cec5381935a4c.gifv" class="fx-thinbord">
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-image">
+<img src="https://64.media.tumblr.com/aec92eeac17f980b87f05455e49908ff/af5867a9bf89386f-48/s540x810/8f3655b59319fe98a9b35a69620c218c006decb5.gifv" class="fx-thinbord">
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-image">
+<img src="https://64.media.tumblr.com/1abd809cf33b7b4aab7e578ba213b22a/af5867a9bf89386f-9b/s540x810/45c48ccddc8f7b4ab565d3f82394312996ecadef.gifv" class="fx-thinbord">
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-image">
+<img src="https://64.media.tumblr.com/faa4cf5febee24e482a111705994e19c/af5867a9bf89386f-e1/s540x810/e96f3a8ec5316c438036b8c1a496b9fe40faa88d.gifv" class="fx-thinbord">
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+<!--- - - - - - - - -->
+</div>
+<div style="width:10px;margin-bottom: 60px;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- - - - - - - - - - -->
+<!-- blank template for image space -->
+<!-- <div class="sidebyside-image">
+<img src="" style="border:1px solid white;" class="gifloops fx-imgpop">
+</div> -->
+
+<!-- <div class="sidebyside-image">
+<img src="" style="border:1px solid white;" class="gifloops fx-imgpop">
+</div> -->
+<!-- - - - - - - - - - -->
+
+
+
+
+
+
+
+
+<!-- END OF PAGE BLOCKS -->
+</div>
+<!-- end <div class="minifolio-textboxes"> -->
+
+<!-- spacer -->
+<!-- <div style="height:10px;margin:30px 0px 30px 0px;"></div> -->
+
+</div>
+<!-- end <div class="caption" align="center"> -->
+</div>
+<!-- end <div class='part'> -->
+<!-- end : END OF PAGE BLOCKS -->
+
+
+
+
+
+
+<!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!-- FOOTER MESSAGE AND BACKURL -->
+<!-- <div style="width:10px;margin-bottom: -60px;"></div>
+<div align="center">
+<div class="sidebyside-textbox textbox-border" style="max-width:450px;margin:-90px 5px -10px 5px;position:relative;">
+<br>
+You can see more at :
+<br><br>
+</div></div>
+<div align="center">
+<div class="footernav-single">
+<a href="https://charlierenwick.com/techart">
+<div class="footernav-button">
+<div class="nextbutton-text" style="font-weight:800;">
+to full portfolio
+</div>
+</div></a>
+</div></div> -->
+<!-- END FOOTER MESSAGE AND BACKURL -->
+<!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!-- . . . . . . . . . . . . . . . . . . . . . . . . . -->
+<!-- INDEX w URLS TO OTHER PAGES SECTION -->
+<!-- . . . . . . . . . . . . . . . . . . . . . . . . . -->
+
+<!-- spacer -->
+<!-- <div style="height:10px;margin:30px 0px 30px 0px;"></div> -->
+<!-- HR line for index page at bottom TOP -->
+<!-- <hr class='hr-acrossfull' style='margin-top:10px;margin-bottom:-110px;'> -->
+<!--
+<div class='part noborder' style='background:none;'>
+<div class="caption" align="center">
+<div class="frontpage">
+     -->
+<!-- / / / / / / / / / / / / / / / / / / /  -->
+
+
+<!--    SHADERS -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!-- <div class="button-div"><a href="https://creatureframe.github.io/assets/tech/techart_shaders.html">
+<video muted loop playsinline webkit-playsinline class='index-vidbutton-tempcancel' onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+<source src="https://creatureframe.github.io/assets/tech/images/button_270px_daytimeshader_b_x2_500k.mp4" type="video/mp4"/>
+</video>
+<div class="frontbutton-text-xs">
+    shaders
+</div>
+</a></div> -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+<!--    TOOLS -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!-- <div class="button-div"><a href="https://charlierenwick.com/techart_tools">
+<video muted loop playsinline webkit-playsinline class='index-vidbutton-tempcancel' onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+<source src="https://creatureframe.github.io/assets/tech/images/button_270px_WS_tomi_c_x2_500k.mp4" type="video/mp4"/>
+</video>
+<div class="frontbutton-text-xs">
+    tools
+</div>
+</a></div> -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+<!--    RIGGING -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!-- <div class="button-div"><a href="https://charlierenwick.com/techart_rigging">
+<img src="https://64.media.tumblr.com/e7ccf623556caccfb181eb6bf2fb12de/2901202291a8766e-22/s400x600/a1bf4475ea19f49c44a47ffbd778602bc2fd58f6.gifv">
+<div class="frontbutton-text-xs">
+rigging
+</div>
+</a></div> -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+<!-- </div></div></div> -->
+
+<!-- HR line for index page at bottom -->
+<!-- <hr class='hr-acrossfull' style='margin-top:-30px;margin-bottom:10px;'> -->
+
+<!-- END INDEX PAGE BUTTONS -->
+<!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- x x x x x x x x x x x x x x x x x x x  -->
+<!--  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ -->
+
+<!--      IF :
+         NO index page buttons, straight to resume -->
+<!-- spacer -->
+<div style="height:10px;margin:-140px 0px 0px 0px;"></div>
+
+<!--  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ -->
+
+<!--      IF :
+         has index page buttons -->
+<!-- spacer -->
+<!-- <div style="height:10px;margin:-80px 0px 30px 0px;"></div> -->
+
+<!--  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ -->
+<!-- x x x x x x x x x x x x x x x x x x x  -->
+
+
+
+
+
+
+
+<!--<div align="center">-->
+<!-- MINI RESUME -->
+<!--
+<div class="resumemini" align="center" style="margin-bottom:-75px;"><table><tbody>
+<tr>
+<td></td>
+<td width="10"></td>
+</tr>
+<tr>
+<td valign="top">Software:</td>
+
+<td width="10"></td>
+<td>Autodesk Maya, Unity3D, Blender, ZBrush, Adobe suite, 3D-Coat Substance
+<img src="https://creatureframe.github.io/assets/tech/images/softwareicons_row_2.png" class="resumemini-img" style="margin:10px 0px;">
+</td>
+
+</tr>
+<tr>
+<td valign="top">Skills:</td>
+
+<td width="10"></td>
+<td>
+    shaders, VFX, rigging, skinning, animation, scripting <i>(MEL, python, bash, C#, JS)</i> and writing tools, batch automation, cloth simulation
+</td>
+</tr>
+</tbody></table></div>
+-->
+<!-- end MINI RESUME -->
+<!--</div>-->
+
+
+
+
+
+
+<!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!-- FOOTER MESSAGE AND BACKURL -->
+<div style="width:10px;margin-bottom: 5px;"></div>
+
+<div align="center">
+<div class="sidebyside-textbox textbox-border" style="max-width:450px;margin:0px 5px -10px 5px;padding:10px 20px;position:relative;">
+    <!-- padding:10px 20px; -->
+<br>
+
+<!-- Responsible for all aspects of each piece (design, modelling, retopologising, texturing, rigging, animation, shaders, etc.), except where otherwise specified.
+<br><br> -->
+
+Thanks for checking out my portfolio!
+
+
+
+<br><br>
+</div></div>
+<div align="center">
+<div class="footernav-single">
+<a href="mailto:creatureframe@gmail.com">
+<div class="footernav-button">
+<div class="nextbutton-text" style="font-weight:800;">
+email me here!
+</div>
+</div></a>
+</div></div>
+<!-- END FOOTER MESSAGE AND BACKURL -->
+<!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+
+<!-- </section> -->
+</div></div>
+<!-- end divs content and content-spacing -->
+</body>
+</html>
