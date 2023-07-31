@@ -24,12 +24,17 @@ Other Credits :
 <!DOCTYPE html>
 <html>
 <head>
+<!--
 <title>tech art portfolio</title>
-<link rel="stylesheet" href="https://creatureframe.github.io/assets/tech/style-tech.css">
-<link rel="stylesheet" href="https://creatureframe.github.io/assets/tech/style-1page.css">
+<link rel="stylesheet" href="assets/style-tech.css">
+<link rel="stylesheet" href="assets/style-1page.css">
+-->
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="style-1page.css">
+
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style-1page.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
 
 
 
@@ -122,11 +127,11 @@ $(document).on('scroll', checkMedia);
 <!--   UNITY WEBGL BUILDS TO DISPLAY   -->
 <!--    (default named : unityContainer ) -->
 
-<!-- <script src="https://creatureframe.github.io/assets/unity/webgl/SlimeShader_demonstrate/Build/UnityLoader.js"></script>
+ <script src="assets/unity/webgl/SlimeShader_demonstrate/Build/UnityLoader.js"></script>
 
 <script>
-  UnityLoader.instantiate("unityContainer_slime", "https://creatureframe.github.io/assets/unity/webgl/SlimeShader_demonstrate/Build/SlimeShader_demonstrate.json");
-</script> -->
+  UnityLoader.instantiate("unityContainer_slime", "assets/unity/webgl/SlimeShader_demonstrate/Build/SlimeShader_demonstrate.json");
+</script> 
 
 
 <!--    example of how to run in page  -->
@@ -134,13 +139,13 @@ $(document).on('scroll', checkMedia);
 
 
 
-<!--    <script src="TemplateData/UnityProgress.js"></script>-->
-<!--    <script src="Build/UnityLoader.js"></script>-->
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
 <!-- //      var unityInstance = -->
 
-<!-- <script>
-UnityLoader.instantiate("unityContainer_timeofday", "https://creatureframe.github.io/assets/unity/webgl/AlpacaTimeOfDayShader_webGL/Build/AlpacaTimeOfDayShader_webGL.json");
-</script> -->
+ <script>
+UnityLoader.instantiate("unityContainer_timeofday", "assets/unity/webgl/AlpacaTimeOfDayShader_webGL/Build/AlpacaTimeOfDayShader_webGL.json");
+</script> 
 
 <!-- //                            , {onProgress: UnityProgress}); -->
 <!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
@@ -215,7 +220,7 @@ Responsible for all aspects of each piece (design, modelling, retopologising, te
 
 
 
-<!-- https://creatureframe.github.io/assets/tech/techart_shadersinteract.html -->
+<!-- assets/techart_shadersinteract.html -->
 
 
 
@@ -271,7 +276,8 @@ rigging
 </div>
 <div class="sidebyside-image">
 <video autoplay muted loop playsinline webkit-playsinline class="gifloops" style="border:4px solid #fff;margin:20px 0px 10px -4px;" width="540">
-    <source src="https://creatureframe.github.io/assets/tech/images/cat_catfinal_x2_1500k_HALD_match_bettaDark_01.mp4" type="video/mp4"/>
+<!--    <source src="assets/images/cat_catfinal_x2_1500k_HALD_match_bettaDark_01.mp4" type="video/mp4"/>-->
+<source src="assets/images/cat_catfinal_x2_1500k.mp4" type="video/mp4"/>
 </video>
 <div style="margin-bottom:-40px;">
     <p>
@@ -511,7 +517,7 @@ A 4-way ramp overlay shader, for setting up lighting for various times of day, o
 
 <br><br>
 
-<div align=center><img src="https://creatureframe.github.io/assets/tech/images/shader_timeOfDay_BRDFs.png" style="
+<div align=center><img src="assets/images/shader_timeOfDay_BRDFs.png" style="
     padding:0px;
     ">
 </div>
@@ -596,7 +602,7 @@ Loading interactive scene. To see this shader demonstrated in a video instead,
  <!-- <div style="height:120px;margin:0px;margin-bottom:0px;"></div>
  <div align="center">
  <div class="footernav-single" style="width:380px;max-width:80%;margin-left:-40px;">
- <a href="https://creatureframe.github.io/assets/tech/techart_shadersinteract.html">
+ <a href="assets/techart_shadersinteract.html">
  <div class="footernav-button" >
  <div class="nextbutton-text" style="font-weight:800;">
  play with these shaders in-browser here!
@@ -626,7 +632,7 @@ Loading interactive scene. To see this shader demonstrated in a video instead,
 <!-- <div style="height:0px;margin:0px;margin-bottom:-7px;"></div>
 <div class="sidebyside-textbox textbox-border note-small" style="margin:-5% 4% 0px 10%;">
 Loading interactive scene. To see this shader demonstrated in a video instead,
-<a class="urly" href="https://creatureframe.github.io/assets/tech/techart_shadersinteract.html">click here!</a>
+<a class="urly" href="assets/techart_shadersinteract.html">click here!</a>
 </div> -->
 
 
@@ -671,7 +677,7 @@ Loading interactive scene. To see this shader demonstrated in a video instead,
 <!-- river dragon physics tail -->
 <div class="sidebyside-image">
 <video muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
-    <source src="https://creatureframe.github.io/assets/tech/images/dragon_tailphysics_x2_1500k_HALD_match_bettaDark_01.mp4" type="video/mp4"/>
+    <source src="assets/images/dragon_tailphysics_x2_1500k.mp4" type="video/mp4"/>
 </video>
 </div>
 <!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
@@ -680,7 +686,10 @@ Loading interactive scene. To see this shader demonstrated in a video instead,
 <!-- - - - - - - - - - -->
 <!-- image whale final scene -->
 <div class="sidebyside-image">
-<img src="https://64.media.tumblr.com/ae07a5102020bd250f50b2950413cc3f/08df2ab86c6f6064-f5/s540x810/d5a7b5c2d8e6f2ac522d168d882c9e261f303c00.gifv" class="gifloops fx-thinbord">
+<!--<img src="https://64.media.tumblr.com/ae07a5102020bd250f50b2950413cc3f/08df2ab86c6f6064-f5/s540x810/d5a7b5c2d8e6f2ac522d168d882c9e261f303c00.gifv" class="gifloops fx-thinbord">-->
+<video muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+    <source src="assets/images/whale_final_x2_2000k.mp4" type="video/mp4"/>
+</video>
 </div>
 <!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
 
@@ -845,7 +854,7 @@ Halftone shader that holds scale to camera distance.
 <!--    WAYWARD PROP RIG      -->
 <!-- - - - - - - - - - - - - - - - - - - -->
 <div class="sidebyside-image" style="max-width:640px;margin:20px 5px;">
-<img src="https://creatureframe.github.io/assets/tech/images/rigproptool.gif" class="gifloops fx-imgpop" style="max-width:600px;width:100%;">
+<img src="assets/images/rigproptool.gif" class="gifloops fx-imgpop" style="max-width:600px;width:100%;">
 </div>
 <div class="sidebyside-textbox textbox-border" style="max-width:450px;margin:20px 5px 40px 5px;">
 <br>
@@ -869,7 +878,7 @@ Halftone shader that holds scale to camera distance.
 <div class="minifolio-altbg">
 
 <div class="sidebyside-image" style="max-width:640px;margin:10px 5px;">
-<!-- <img src="https://creatureframe.github.io/assets/tech/images/tool_scalematch.mp4" class="gifloops fx-imgpop" style="max-width:600px;width:100%;"> -->
+<!-- <img src="assets/images/tool_scalematch.mp4" class="gifloops fx-imgpop" style="max-width:600px;width:100%;"> -->
 
 <!-- <div style="max-width:1066px;"> -->
 <!-- width="638"> -->
@@ -910,7 +919,7 @@ Halftone shader that holds scale to camera distance.
 </div><br>
 <div style="max-width:1066px;">
 <video muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="1066">
-<source src="https://creatureframe.github.io/assets/tech/images/WS_skeletonchecker_x2_500k.mp4" type="video/mp4"/>
+<source src="assets/images/WS_skeletonchecker_x2_500k.mp4" type="video/mp4"/>
 </video>
 </div>
     <br><br>
@@ -958,7 +967,7 @@ A Maya tool for quickly adding nurbs curves to selected objects. It colours mesh
 <!-- <div style="width:10px;margin-bottom: -15px;"></div>
 <div align="center">
 <div class="footernav-single">
-<a href="https://creatureframe.github.io/assets/tech/tool-downloads/ColourSwitch v2.2 for Maya.zip">
+<a href="assets/tool-downloads/ColourSwitch v2.2 for Maya.zip">
 <div class="footernav-button">
 <div class="nextbutton-text" style="font-weight:800;font-size: 16pt;">
 download script
@@ -972,7 +981,7 @@ download script
 <!-- - - - - - - - - - - - - - - - - - - -->
 <div class="sidebyside-image">
 <video muted loop playsinline webkit-playsinline class='gifloops fx-thinbord' width="540" >
-<source src="https://creatureframe.github.io/assets/tech/images/makenurbscurvesatselectedjoints.mp4" type="video/mp4"/>
+<source src="assets/images/makenurbscurvesatselectedjoints.mp4" type="video/mp4"/>
 </video>
 </div>
 <!-- - - - - - - - - - - - - - - - - - - -->
@@ -1097,9 +1106,9 @@ to full portfolio
 
 <!--    SHADERS -->
 <!-- - - - - - - - - - - - - - - - - - - -->
-<!-- <div class="button-div"><a href="https://creatureframe.github.io/assets/tech/techart_shaders.html">
+<!-- <div class="button-div"><a href="assets/techart_shaders.html">
 <video muted loop playsinline webkit-playsinline class='index-vidbutton-tempcancel' onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-<source src="https://creatureframe.github.io/assets/tech/images/button_270px_daytimeshader_b_x2_500k.mp4" type="video/mp4"/>
+<source src="assets/images/button_270px_daytimeshader_b_x2_500k.mp4" type="video/mp4"/>
 </video>
 <div class="frontbutton-text-xs">
     shaders
@@ -1112,7 +1121,7 @@ to full portfolio
 <!-- - - - - - - - - - - - - - - - - - - -->
 <!-- <div class="button-div"><a href="https://charlierenwick.com/techart_tools">
 <video muted loop playsinline webkit-playsinline class='index-vidbutton-tempcancel' onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-<source src="https://creatureframe.github.io/assets/tech/images/button_270px_WS_tomi_c_x2_500k.mp4" type="video/mp4"/>
+<source src="assets/images/button_270px_WS_tomi_c_x2_500k.mp4" type="video/mp4"/>
 </video>
 <div class="frontbutton-text-xs">
     tools
@@ -1187,7 +1196,7 @@ rigging
 
 <td width="10"></td>
 <td>Autodesk Maya, Unity3D, Blender, ZBrush, Adobe suite, 3D-Coat Substance
-<img src="https://creatureframe.github.io/assets/tech/images/softwareicons_row_2.png" class="resumemini-img" style="margin:10px 0px;">
+<img src="assets/images/softwareicons_row_2.png" class="resumemini-img" style="margin:10px 0px;">
 </td>
 
 </tr>
