@@ -516,20 +516,22 @@ input::placeholder {
 }
 
 section {
-    margin: 100px auto;
+/*    margin: 100px auto;*/
+/*    margin: auto auto;*/
 /*            width: 80vw;*/
-    width: 90%;
-    max-width: 1200px;
+/*    width: 90%;*/
+/*    width: 100%;*/
+/*    max-width: 1300px;*/
 }
 
 
 /*remove i think*/
 .content-spacing {
-    margin: 100px auto;
+/*    margin: 100px auto;*/
     margin: auto auto;
-    width: 90%;
+/*    width: 90%;*/
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
 }
 
 
@@ -1019,11 +1021,13 @@ body.night .button-div {
 .noborder {
     border: none;
 }
+/*
 .frontpage {
     max-width:1200px;
     margin:0px -15px;
     padding:-30px;
 }
+*/
 
 .resumemini {
     max-width: 540px;
