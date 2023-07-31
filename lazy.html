@@ -132,7 +132,7 @@ $(document).on('scroll', checkMedia);
 // https://www.roboleary.net/frontend/2022/03/28/why-doesnt-the-video-element-have-native-lazy-loading.html
     
 document.addEventListener("DOMContentLoaded", function() {
-  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+  var lazyVideos = [].slice.call(document.querySelectorAll("video.vidzy"));
 
   if ("IntersectionObserver" in window) {
     var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function() {
           }
 
           video.target.load();
-          video.target.classList.remove("lazy");
+          video.target.classList.remove("vidzy");
           lazyVideoObserver.unobserve(video.target);
         }
       });
@@ -262,7 +262,7 @@ class="lazy"
 and
 <source data-src="
     
-<video class="lazy" autoplay muted loop playsinline width="600" height="300" poster="cover.jpg">
+<video class="vidzy" autoplay muted loop playsinline width="600" height="300" poster="cover.jpg">
   <source data-src="screen-recording.webm" type="video/webm">
   <source data-src="screen-recording.mp4" type="video/mp4">
 </video>
@@ -499,7 +499,7 @@ Loading interactive scene. To see this shader demonstrated in a video instead,
 <!--<div class="sidebyside-image" style="margin-left:20px;">-->
 <div class="sidebyside-image">
 <div class="gifloops fx-blankpadding" style="padding:18px; margin:0px;">
-<video class="lazy" muted loop playsinline webkit-playsinline class="gifloops" width="500">
+ muted loop playsinline webkit-playsinline class="gifloops" width="500">
 <source data-src="assets/images/toucan_fly_x2_1500k.mp4" type="video/mp4"/>
 </video>
 </div>
@@ -581,7 +581,7 @@ https://charlierenwick.com/anim_misc
 <!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
 <!-- betta dark -->
 <div class="sidebyside-image">
-<video class="lazy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+<video class="vidzy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
     <source data-src="assets/images/betta_dark_x2_1500k_compat.mp4" type="video/mp4"/>
 </video>
 </div>
@@ -590,7 +590,7 @@ https://charlierenwick.com/anim_misc
 <!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
 <!-- betta dusk -->
 <div class="sidebyside-image">
-<video class="lazy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+<video class="vidzy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
     <source data-src="assets/images/betta_duskBetta_x2.mp4" type="video/mp4"/>
 </video>
 </div>
@@ -598,7 +598,7 @@ https://charlierenwick.com/anim_misc
 <!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
 <!-- betta day -->
 <div class="sidebyside-image">
-<video class="lazy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+<video class="vidzy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
     <source data-src="assets/images/betta_day_x2.mp4" type="video/mp4"/>
 </video>
 </div>
@@ -607,7 +607,7 @@ https://charlierenwick.com/anim_misc
 <!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
 <!-- betta dawn -->
 <div class="sidebyside-image">
-<video class="lazy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+<video class="vidzy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
     <source data-src="assets/images/betta_dawn_x2.mp4" type="video/mp4"/>
 </video>
 </div>
@@ -654,7 +654,7 @@ https://charlierenwick.com/anim_misc
 <!--    PIGEON PANIC ANIM IDLE      -->
 <!-- - - - - - - - - - - - - - - - - - - -->
 <div class="sidebyside-image">
-<video class="lazy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+<video class="vidzy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
     <source data-src="assets/images/pigeon_idle_x2_500k.mp4" type="video/mp4"/>
 </video>
 <!--
@@ -708,7 +708,7 @@ https://charlierenwick.com/anim_misc
 </div>
 -->
 <div class="sidebyside-image">
-<video class="lazy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+<video class="vidzy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
     <source data-src="assets/images/gelatocart_x2_2000k.mp4" type="video/mp4"/>
 </video>
 </div>
@@ -771,7 +771,7 @@ https://charlierenwick.com/anim_misc
 <!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
 <!-- alpaca mopping -->
 <div class="sidebyside-image">
-<video class="lazy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+<video class="vidzy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
     <source data-src="assets/images/alpaca_mopping_x2_1000k.mp4" type="video/mp4"/>
 </video>
 <!--
@@ -835,7 +835,7 @@ https://charlierenwick.com/anim_misc
 <!--breakfast props-->
 <!--
 <div class="sidebyside-image">
-<video class="lazy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+<video class="vidzy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
 <source data-src="https://creatureframe.github.io/assets/tech/images/breakfast_20fps_x2_1500k.mp4" type="video/mp4"/>
 </video>
 </div>
@@ -875,7 +875,7 @@ https://charlierenwick.com/anim_misc
 </div>
 -->
 <div class="sidebyside-image">
-<video class="lazy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
+<video class="vidzy" muted loop playsinline webkit-playsinline class="gifloops fx-thinbord" width="540">
     <source data-src="assets/images/shark_txrMap_x2_2000k.mp4" type="video/mp4"/>
 </video>
 </div>
@@ -1046,7 +1046,7 @@ rigging
 <!-- - - - - - - - - - - - - - - - - - - -->
 <!--
  <div class="button-div"><a href="https://creatureframe.github.io/assets/tech/techart_shaders.html">
-<video class="lazy" muted loop playsinline webkit-playsinline class='index-vidbutton-tempcancel' onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+<video class="vidzy" muted loop playsinline webkit-playsinline class='index-vidbutton-tempcancel' onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
 <source data-src="https://creatureframe.github.io/assets/tech/images/button_270px_daytimeshader_b_x2_500k.mp4" type="video/mp4"/>
 </video>
 <div class="frontbutton-text-xs">
@@ -1061,7 +1061,7 @@ rigging
 <!-- - - - - - - - - - - - - - - - - - - -->
 <!--
  <div class="button-div"><a href="https://charlierenwick.com/techart_tools">
-<video class="lazy" muted loop playsinline webkit-playsinline class='index-vidbutton-tempcancel' onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+<video class="vidzy" muted loop playsinline webkit-playsinline class='index-vidbutton-tempcancel' onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
 <source data-src="https://creatureframe.github.io/assets/tech/images/button_270px_WS_tomi_c_x2_500k.mp4" type="video/mp4"/>
 </video>
 <div class="frontbutton-text-xs">
