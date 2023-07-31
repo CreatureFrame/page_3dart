@@ -517,11 +517,11 @@ input::placeholder {
 
 section {
 /*    margin: 100px auto;*/
-/*    margin: auto auto;*/
+    margin: auto auto;
 /*            width: 80vw;*/
 /*    width: 90%;*/
-/*    width: 100%;*/
-/*    max-width: 1300px;*/
+    width: 100%;
+    max-width: 1300px;
 }
 
 
