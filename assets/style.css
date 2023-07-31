@@ -37,7 +37,7 @@ body.night .banner-note {
     margin: 3rem 0;
     margin-bottom: 85px;
     width: 100%;
-    background: #ffffff;
+    /* background: #ffffff; */
     border: 1px solid gold;
     border: 1px solid #e2e2e2;
     overflow: hidden;
@@ -516,22 +516,22 @@ input::placeholder {
 }
 
 section {
-/*    margin: 100px auto;*/
-    margin: auto auto;
+    margin: 100px auto;
+/*    margin: auto auto;*/
 /*            width: 80vw;*/
 /*    width: 90%;*/
     width: 100%;
-    max-width: 1300px;
+    max-width: 1200px;
 }
 
 
 /*remove i think*/
 .content-spacing {
-/*    margin: 100px auto;*/
-    margin: auto auto;
+    margin: 100px auto;
+/*    margin: auto auto;*/
 /*    width: 90%;*/
     width: 100%;
-    max-width: 1300px;
+    max-width: 1200px;
 }
 
 
@@ -852,17 +852,20 @@ body.night .footernav-button:hover .nextbutton-text-smaller  {
 .twitter-tweet {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     border-radius: 12px;
+    max-width: 100%;
 }
 
 
 
 .button-div {
     display: inline-block;
-    border: 1px solid #fff;
+    border: 1px solid transparent;
     padding: 17px;
     width: 270px;
     height: 270px;
     z-index:5;
+            max-width:100%;
+            position: relative;
 }
 
 .button-div:hover {
@@ -875,27 +878,47 @@ body.night .footernav-button:hover .nextbutton-text-smaller  {
     width: 260px;
     margin: 0;
     image-rendering: pixelated;
+            max-width:100%;
 }
 
 .button-div:hover img {
     border: 4px solid #fff;
     width: 270px;
     margin: -5px;
+            max-width:100%;
 }
 
 
-.index-vidbutton {
-    width: 260px;
-    margin: 0;
-    border: 4px solid #fff;
-    image-rendering: pixelated;
-}
-.index-vidbutton:hover {
-    width: 270px;
-    margin: -5px;
-    border: 4px solid #fff;
-    image-rendering: pixelated;
-}
+
+        .button-div video {
+            border: 4px solid #fff;
+            width: 260px;
+            margin: 0;
+            image-rendering: pixelated;
+            max-width:100%;
+        }
+
+        .button-div:hover video {
+            border: 4px solid #fff;
+            width: 270px;
+            margin: -5px;
+            max-width:100%;
+        }
+
+
+        .button-div .index-vidbutton {
+            width: 260px;
+            max-width:100%;
+            margin: 0;
+            border: 4px solid #fff;
+        }
+        .button-div .index-vidbutton:hover {
+            width: 270px;
+            max-width:100%;
+            margin: -0px;
+            border: 4px solid #fff;
+        }
+
 
 
 .button-div .frontbutton-text {
