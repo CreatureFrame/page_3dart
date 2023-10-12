@@ -1364,10 +1364,10 @@ body.night .minifolio-altbg {
 
 
 
+/*    background-image: url("https://creatureframe.github.io/assets/tech/images/embed_webgl_575x575_bg.png");*/
 
 
 .webgl-container{
-/*    background-image: url("https://creatureframe.github.io/assets/tech/images/embed_webgl_575x575_bg.png");*/
     background-image: url("assets/deco/embed_webgl_575x575_bg.png");
     background-repeat: no-repeat;
     max-width: 575px;

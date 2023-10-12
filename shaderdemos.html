@@ -1,0 +1,480 @@
+<!-----
+▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼
+
+site coding : creatureframe@gmail.com
+
+originally referenced from:
+★ [ Frome Home ] theme by ricecodes ★
+https://ricecodes.tumblr.com/
+
+Other Credits :
+★ Icons: https://boxicons.com/
+★ Day/Night Mode: https://egg.design/post/186889223257/day-night-mode-tutorial-after-featuring-a
+★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/162657076440/remove-tumblrs-redirects
+
+▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
+----->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+
+<link rel="stylesheet" href="assets/style-tech.css">
+<link rel="stylesheet" href="assets/style-1page.css">
+-->
+
+<title>tech art portfolio</title>
+    
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style-1page.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo&family=Finlandica&family=Inconsolata&family=Mali:wght@500&family=Monda&family=Nanum+Gothic&family=Open+Sans&family=Quicksand:wght@400;500;600;700&family=Secular+One&family=Varela+Round&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+<script type="text/javascript">
+$(window).load(function() {
+setTimeout(function() {
+$("#loading").fadeOut("slow");
+}, 6600);
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+<script>
+$(document).ready(function() {
+var $container = $(".content");
+$(".menu-btn,a.exit").click(function() {
+$(".menu").fadeToggle();
+});
+$(".ptags").each(function() {
+$(this).click(function() {
+$(this).closest("article").find(".tags-wrap").slideToggle("fast");
+$(".close", this).toggle();
+});
+});
+var mode = localStorage.getItem("daynight");
+localStorage.setItem("daynight", mode);
+if (mode == "night") {
+$("body").addClass("night");
+$(".luna").hide();
+$(".solis").show();
+} else {
+mode = "day";
+}
+$(".luna").click(function() {
+$("body").addClass("night");
+$(".luna").hide();
+$(".solis").show();
+localStorage.setItem("daynight", "night")
+});
+$(".solis").click(function() {
+$("body").removeClass("night");
+$(".solis").hide();
+$(".luna").show();
+localStorage.setItem("daynight", "day")
+});
+});
+</script>
+<script>
+$(document).ready(function(){
+$('a[href*="t.umblr.com/redirect"]').each(function(){
+var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
+var replaceURL = decodeURIComponent(originalURL);
+$(this).attr("href", replaceURL);
+});
+});
+</script>
+
+<script>
+// Mikkel Jensen's solution I got from : https://stackoverflow.com/questions/15395920/play-html5-video-when-scrolled-to
+$(document).ready(function() {
+// Get media - with disabled (audio or video)
+var media = $('video').not("[autoplay='autoplay']");
+var tolerancePixel = 40;
+function checkMedia(){
+// Get current browser top and bottom
+var scrollTop = $(window).scrollTop() + tolerancePixel;
+var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+media.each(function(index, el) {
+var yTopMedia = $(this).offset().top;
+var yBottomMedia = $(this).height() + yTopMedia;
+if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){ //view explaination in `In brief` section above
+$(this).get(0).play();
+} else {
+$(this).get(0).pause();
+}
+});
+}
+$(document).on('scroll', checkMedia);
+});
+</script>
+
+
+
+
+<!--  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!--   UNITY WEBGL BUILDS TO DISPLAY   -->
+<!--    (default named : unityContainer ) -->
+
+ <script src="assets/unity/webgl/SlimeShader_demonstrate/Build/UnityLoader.js"></script>
+
+<script>
+  UnityLoader.instantiate("unityContainer_slime", "assets/unity/webgl/SlimeShader_demonstrate/Build/SlimeShader_demonstrate.json");
+</script> 
+
+
+<!--    example of how to run in page  -->
+<!--    <div id="unityContainer_slime" style="width: 500px; height: 500px; margin: auto"></div>-->
+
+
+
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+<!-- //      var unityInstance = -->
+
+ <script>
+UnityLoader.instantiate("unityContainer_timeofday", "assets/unity/webgl/AlpacaTimeOfDayShader_webGL/Build/AlpacaTimeOfDayShader_webGL.json");
+</script> 
+
+<!-- //                            , {onProgress: UnityProgress}); -->
+<!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+
+</head><body>
+
+
+
+
+    
+    
+    
+    
+<!-- PAGE HEADER -->
+<div class="header">
+<a class="menu-btn" title="back to folio" href="http://3dart.charlierenwick.com/tech"><span class="bx bx-menu"></span></a>
+<a class="bx-head" title="development log" href="http://dev.creatureframe.com"><span class="bx bxs-book-alt"></span></a>
+<a class="bx-head" title="twitter" href="https://twitter.com/creatureframe"><span class="bx bxl-twitter"></span></a>
+<a class="bx-head" title="contact" href="mailto:creatureframe@gmail.com"><span class="bx bxs-envelope"></span></a>
+<div class="t-controls"><a class="luna" title="dark mode"><span class="bx bx-moon"></span></a>
+<a class="solis" style="display:none;" title="light mode"><span class="bx bx-sun"></span></a></div>
+</div>
+<!-- end div header - PAGE HEADER -->
+<div class="content">
+<div class="content-spacing">
+<section> 
+<div style="margin:-150px 0px 0px 0px;"></div>
+<div class='part'>
+<div class="caption" align="center">
+
+
+
+
+
+
+<div style="height:10px;margin:0px;"></div>
+
+<!-- START OF FOLIO SECTIONS WITHIN BODY -->
+<!-- <br><br><br><br> -->
+<div class="minifolio-textboxes">
+
+
+
+
+
+
+
+
+<!-- title block -->
+<hr class="hr-goldblock">
+<div class="mid-title" style="font-size:30pt;">
+shaders & vfx
+</div><br>
+<!-- end title block -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+<!-- spacer -->
+<div style="height:30px;margin:0px;margin-bottom:0px;"></div>
+
+    
+    
+    
+
+
+<style>
+.webgl-container{
+    background-image: url("assets/deco/embed_webgl_575x575_bg.png");
+    background-repeat: no-repeat;
+    max-width: 575px;
+    width:100%;
+    height:575px;
+    max-height:575px;
+    padding:37px 20px;
+    margin-bottom: -130px;
+    background-clip: padding-box;
+    background-size: 100% 100%;
+}
+
+.webgl-embed{
+    max-width: 500px;
+    width:100%;
+    height: 100%;
+    max-height: 500px;
+}
+</style>
+    
+    
+<!--old link to video versions,-->
+<!--    <a class="urly" href="https://charlierenwick.com/techart">click here!</a>-->
+<!--now just goes back to main tech folio-->
+
+
+<!--  ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!--    DAY TIME SHADER      -->
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+    <!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-image" style="max-width:600px;height:100%;max-height:600px;margin-left:-15px;margin-right:30px;">
+<div class="webgl-container">
+<div id="unityContainer_timeofday" class="webgl-embed"></div>
+</div>
+
+<br><br>
+
+
+<!--    webgl-redir-->
+<!-- spacer -->
+<div style="height:0px;margin:0px;margin-bottom:-7px;"></div>
+<div class="sidebyside-textbox textbox-border note-small" style="margin:-5% 4% 0px 10%;">
+Loading interactive scene. To see this shader demonstrated in a video instead,
+<a class="urly" href="https://3dart.charlierenwick.com/tech">click here!</a>
+</div>
+
+
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+
+
+<!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-textbox"  style="margin-top:40px;margin-bottom:-40px;padding:30px;">
+
+<!--<hr class="hr-goldblock" style="max-width: 100%;">-->
+<div class="mid-title" style="font-size:24px;margin:-2% 12%;">
+time-of-day lighting
+</div><br><br>
+
+<div class="sidebyside-textbox textbox-border " style="margin:0% 4% 0% 4%;">
+A 4-way ramp overlay shader, for setting up lighting for various times of day, on a per-model basis.
+</div>
+
+<br><br>
+
+<div align=center><img src="assets/images/shader_timeOfDay_BRDFs.png" style="
+    padding:0px;
+    ">
+</div>
+
+<hr class="hr-goldblock" style="width:300%;margin: 50px -350px -40px -350px;">
+
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!--    END DAY TIME SHADER      -->
+<!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+
+
+
+
+
+
+
+    <!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-textbox" style="margin-top:70px;margin-bottom:100px;">
+
+<div align=center>
+<!--<hr class="hr-goldblock" style="max-width: 100%;">-->
+<div class="mid-title" style="font-size:24px;margin:5% 12% -2% 12%;">
+slime creatures
+</div><br><br>
+    </div>
+
+<div class="sidebyside-textbox textbox-border " style="margin:4% 4% 0% 4%;">
+For a 7 day game jam, I designed, modelled, rigged and animated the characters from scratch, and created a suitable refracting slime shader.
+<br><br>
+Press the "see shader" button to play with some variables.
+</div>
+</div>
+<!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+
+
+
+
+
+    <!-- - - - - - - - - - - - - - - - - - - -->
+<div class="sidebyside-image" style="max-width:600px;margin-left:-15px;margin-right:30px; margin-top:-100px;">
+<div class="webgl-container">
+<div id="unityContainer_slime" class="webgl-embed"></div>
+</div>
+
+<!--    webgl-redir-->
+<div class="sidebyside-textbox textbox-border note-small" style="margin:2% 4% 0px 10%;">
+Loading interactive scene. To see this shader demonstrated in a video instead,
+    <a class="urly" href="3dart.charlierenwick.com/tech">click here!</a>
+</div>
+</div>
+    <!-- - - - - - - - - - - - - - - - - - - -->
+
+
+
+<!-- - - - - - - - - - - - - - - - - - - -->
+<!--    END SLIME SHADER      -->
+<!--  ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+
+    
+    
+    
+<!-- spacer -->
+<div style="height:80px;margin:0px;margin-bottom:0px;"></div>
+
+
+
+
+
+
+
+
+ <!-- <div style="height:120px;margin:0px;margin-bottom:0px;"></div>
+ <div align="center">
+ <div class="footernav-single" style="width:380px;max-width:80%;margin-left:-40px;">
+ <a href="assets/techart_shadersinteract.html">
+ <div class="footernav-button" >
+ <div class="nextbutton-text" style="font-weight:800;">
+ play with these shaders in-browser here!
+ </div>
+ </div></a>
+ </div>
+ </div> -->
+
+
+
+
+<!-- <img src="https://64.media.tumblr.com/bfb0c51aa4dcac79d904c33ea70d373b/5ceb7fa8fa97c794-ae/s540x810/01d57d0ad6af1606f492206a985f33d179ee3fdd.gifv" class="gifloops fx-thinbord"> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+<!-- end <div class="minifolio-altbg"> for section-block -->
+
+
+
+<!-- fx-photoborder -->
+<!-- fx-thinbord -->
+
+
+
+<!--    webgl-redir-->
+<!-- spacer -->
+<!-- <div style="height:0px;margin:0px;margin-bottom:-7px;"></div>
+<div class="sidebyside-textbox textbox-border note-small" style="margin:-5% 4% 0px 10%;">
+Loading interactive scene. To see this shader demonstrated in a video instead,
+<a class="urly" href="assets/techart_shadersinteract.html">click here!</a>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- END OF PAGE BLOCKS -->
+</div>
+<!-- end <div class="minifolio-textboxes"> -->
+</div>
+<!-- end <div class="caption" align="center"> -->
+</div>
+<!-- end <div class='part'> -->
+<!-- end : END OF PAGE BLOCKS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ▼ -->
+<!-- FOOTER MESSAGE AND BACKURL -->
+<!--<div style="width:10px;margin-bottom: 5px;"></div>-->
+    
+<div style="width:10px;margin:-82px 0px 0px 0px;"></div> 
+    
+
+<!--
+<div align="center">
+<div class="sidebyside-textbox textbox-border" style="max-width:450px;margin:0px 5px -10px 5px;padding:10px 20px;position:relative;"><br>
+Thanks for checking out my portfolio!
+<br><br>
+</div></div>
+-->
+    
+<div align="center">
+<div class="footernav-single">
+<a href="https://3dart.charlierenwick.com/tech">
+<div class="footernav-button">
+<div class="nextbutton-text" style="font-weight:800;font-size: 20pt;">
+back to techart folio
+</div>
+</div></a>
+</div></div>
+<!-- END FOOTER MESSAGE AND BACKURL -->
+<!-- ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ -->
+
+<!-- style="width:400px;"-->
+
+
+
+</section> 
+</div></div>
+<!-- end divs content and content-spacing -->
+</body>
+</html>
