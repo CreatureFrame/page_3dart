@@ -301,6 +301,14 @@ p {
     width:10px;
 }
 
+.divhr-thickgold {
+    background:#ffc800;
+    padding:10px;
+    margin:30px -40px 50px -40px;
+    margin:10px -40px 40px -40px;
+    border:5px solid #ffe196;
+} 
+
 
 .hr-space {
     margin: 35px 5px;
